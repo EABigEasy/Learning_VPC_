@@ -1,0 +1,10 @@
+##VPC Traffic flow + Security
+
+
+Create VPC, CIDR= 10.0.0.0/16
+create subnets, Private and public. CIDR =10.0.0.0/24 and 10.0.0.0/32
+
+In a public Subnet, underf actions, edit subnet, Enable auto-assign public IP address.
+
+Create Route tables- That's how resources know their way to the internet.
+

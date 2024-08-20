@@ -1,11 +1,10 @@
 
-#Creating a Private Subnet
-
+Creating a Private Subnet
 
 Unlike a Public subnet that can be reached, Public subnet can receive requests after configuring IGW, Route Tables, and Subnet assocuatuons.
 You want to keep it private, unaccesible from the internet and resources in the private subnet saecured.
 
-###Understand NACL AND SG.
+Understand NACL AND SG.
 S.G security groups operate at resource level while NACL operatesat subnet level.
 
 Avoid CIDR overlap.  while creating PRivate subnet you also need to create private route tables.

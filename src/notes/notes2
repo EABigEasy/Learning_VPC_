@@ -7,4 +7,5 @@ create subnets, Private and public. CIDR =10.0.0.0/24 and 10.0.0.0/32
 In a public Subnet, underf actions, edit subnet, Enable auto-assign public IP address.
 
 Create Route tables- That's how resources know their way to the internet.
-
+Note every VPC has default Subnet, default Route table (Also called Main route).
+you can edit subnet associations in the main

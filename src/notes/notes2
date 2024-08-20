@@ -9,3 +9,11 @@ In a public Subnet, underf actions, edit subnet, Enable auto-assign public IP ad
 Create Route tables- That's how resources know their way to the internet.
 Note every VPC has default Subnet, default Route table (Also called Main route).
 you can edit subnet associations in the main
+
+A Public Subnet is a subnet with a route in the route table that is connected to the internet gateway that connects to the public.
+
+Destination is Ipv4 CIDR block address that traffic in MY VPC. 
+Target : is the road/path traffic will use to get to destination
+
+
+Security Group is security on a Resource level

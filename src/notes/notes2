@@ -1,6 +1,4 @@
 VPC Traffic flow + Security
-
-
 Create VPC, CIDR= 10.0.0.0/16
 create subnets, Private and public. CIDR =10.0.0.0/24 and 10.0.0.0/32
 
@@ -17,3 +15,14 @@ Target : is the road/path traffic will use to get to destination
 
 
 Security Group is security on a Resource level
+Understand Protocols and sources. e.g http =80, https =443, ssh =22, ftp =21, MYSQL/Aurora =3306
+i.e for Inbound rules, HTTP, HTTPS  and 0.0.0.0 source means  inbound traffic froma ll IPs are allowed to access resource.
+
+While for Outbound rule, Allow all means all outbound traffic is allowed.
+E.g My WebApp requesting data from  public source.
+Outbound rule by default all outbound traffic is allowed. 
+
+NACL
+ Set Higher level /Broad Traffic rules at the Subnet level.
+
+There are Inbound rules and Outbound rules

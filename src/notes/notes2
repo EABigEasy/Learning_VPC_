@@ -24,5 +24,6 @@ Outbound rule by default all outbound traffic is allowed.
 
 NACL
  Set Higher level /Broad Traffic rules at the Subnet level.
-
 There are Inbound rules and Outbound rules
+
+Everytime you create a VPC, there are default NACL rules set up,

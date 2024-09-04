@@ -1,3 +1,30 @@
+Project Link : https://www.youtube.com/watch?v=SXPeEcLf63E&list=PL8O9iwxpgTOKL1WeeFkyd_-zPUmtxZxTY&index=10
+A WebApp is different from a website. 
+A Webapp can be a website but its dynamic and interactive, there are documents, every user of the WebApp can get different experience. 
+While A Website can be static or dynamic. 
+According to AmazonQ .
+  The difference is The key differences between a website and a web application (webapp) are:
+
+Functionality:
+Websites are primarily focused on delivering static content (text, images, etc.) to users.
+Webapps have more interactive and dynamic functionality, allowing users to perform tasks, access data, and interact with the application.
+
+Technology:Websites are typically built using HTML, CSS, and JavaScript, with a focus on presenting information.
+Webapps often utilize server-side technologies (e.g., PHP, Python, Java) to handle complex logic, data processing, and user interactions.
+
+User Experience:Websites generally provide a more passive, information-centric experience for users.
+Webapps offer a more interactive and application-like experience, with features such as forms, user accounts, real-time updates, and data manipulation.
+
+Hosting:Websites can be hosted on simple web hosting services, which provide storage and serve the static content.
+Webapps typically require more robust hosting solutions, such as cloud-based platforms or dedicated servers, 
+to handle the dynamic nature of the application and its server-side components.
+
+Development Complexity:Websites are generally simpler to develop and maintain, as they focus on content presentation.
+Webapps involve more complex development, as they need to handle user interactions, data management, and server-side logic.
+
+
+
+
 Step 1 :Set up an IAM user
 Security reasons, recommended by AWS to not use root account to avoid security breaches, So Root stays secured.
 For Example. User =SamSon , Allow MAnagement console access, and generate password.
@@ -11,9 +38,8 @@ Integrated Development Environment is a tool, Developers write code, debug, mana
 most IDEs are downloaded e.g Microsoft Visual studio code.
 Note  AWS CLoud9 is  now deprecated. 
 
-You can create EC2 and login via cloudshell.
+You can try to work on visual studio code.
 
-EC2  becomes our environment.
 Environment is the key to build an application.
 so many application will use Many environments.
 1 Environment to 1 Application.
@@ -24,9 +50,83 @@ Install Maven & Java.
  What is Apache Maven?
 Apache Maven is a powerful tool that automates the building of software.
 
-Building is an important multi-step process that transforms code written by developers (like you!) into a final product that is ready for computers to run. The key steps typically include:
+Building is an important multi-step process that transforms code written by developers (like you!) into a final product that is ready for computers to run.
+The key steps typically include:
 
 1. Compiling: converting your code written in programming languages like Java into machine code that a computer can execute directly.
-2. Linking: combining the compiled machine code with additional dependencies (i.e. external resources required for your application to function) to create a single program for the computer to run all together.
-3. Packaging: assembling your file into a packaged form. For Java projects (which is what we're doing), this would be a JAR (Java Archive Resource) file that you'll learn more about in Project 3 of this DevOps Series. This JAR file makes your program easily distributed or deployed in other environments.
+2. Linking: combining the compiled machine code with additional dependencies
+(i.e. external resources required for your application to function) to create a single program for the computer to run all together.
+3. Packaging: assembling your file into a packaged form. For Java projects (which is what we're doing), 
+this would be a JAR (Java Archive Resource) file that you'll learn more about in Project 3 of this DevOps Series.
+This JAR file makes your program easily distributed or deployed in other environments.
 4. Testing: running automated tests to make sure your software works without bugs or issues.
+
+*** BASH CODE****
+sudo wget https://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+
+sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+‍
+sudo yum install -y apache-maven
+*******
+
+Now we Install Java.
+We are going to install Java 8, or more specifically Amazon Correto 8. Run these commands over separate lines:
+*** BASH CODE****
+sudo amazon-linux-extras enable corretto8
+
+sudo yum install -y java-1.8.0-amazon-corretto-devel
+
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-amazon-corretto.x86_64
+
+export PATH=/usr/lib/jvm/java-1.8.0-amazon-corretto.x86_64/jre/bin/:$PATH
+
+*******
+
+To verify that Java 8 is installed correctly, run this next:
+java -version
+To verify that Maven is installed correctly, run this next:
+mvn -v
+
+Tools are installed.[Maven &Java] 
+ run the command : mvn to create a sample Project Build.
+
+When created, edit index.jsp file that is what helps create WebApp. That is file is edited to what you want.
+
+
+***Create the Application ***
+
+Use mvn commmand to generate a sample Java web app. To do this, use these commands:
+bash
+
+Copy code
+
+mvn archetype:generate \
+   -DgroupId=com.nextwork.app \
+   -DartifactId=nextwork-web-project \
+   -DarchetypeArtifactId=maven-archetype-webapp \
+   -DinteractiveMode=false
+
+When you run mvn commands, you're asking Maven to perform tasks (like creating a new project or building an existing one).
+
+The mvn archetype:generate command specifically tells Maven to create a new project from a template (which Maven calls an archetype). 
+This command sets up a basic structure for your project, so you don't have to start from scratch.
+
+Notice a folder called " nextwork-web-project" is now in your IDE's file explorer! This is Maven's awesome set up work in action.
+
+Modify the "index.jsp" file to customize the HTML code (to make it your own!). You can modify the file by double-clicking on it in the file explorer.
+Don't forget to replace "<YOUR NAME>" from the following code with your name::
+<html>
+
+<body>
+
+<h2>Hello <YOUR NAME>!</h2>
+
+<p>This is my NextWork web application working!</p>
+
+</body>
+
+</html>
+
+Save .
+
+At The end Delete The Resources.

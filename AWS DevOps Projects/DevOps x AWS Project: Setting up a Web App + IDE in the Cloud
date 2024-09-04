@@ -1,1 +1,32 @@
+Step 1 :Set up an IAM user
+Security reasons, recommended by AWS to not use root account to avoid security breaches, So Root stays secured.
+For Example. User =SamSon , Allow MAnagement console access, and generate password.
 
+Set Permissions, best practice is to add policies to IAM group, then add user to IAM Group to avoid multiple attempts to create policies.
+Download CSV to a secure folder and open to use link to account.
+
+Step 2: Set up IDE. 
+Integrated Development Environment is a tool, Developers write code, debug, manage, test code.
+
+most IDEs are downloaded e.g Microsoft Visual studio code.
+Note  AWS CLoud9 is  now deprecated. 
+
+You can create EC2 and login via cloudshell.
+
+EC2  becomes our environment.
+Environment is the key to build an application.
+so many application will use Many environments.
+1 Environment to 1 Application.
+
+Step 3. 
+Install Maven & Java.
+
+ What is Apache Maven?
+Apache Maven is a powerful tool that automates the building of software.
+
+Building is an important multi-step process that transforms code written by developers (like you!) into a final product that is ready for computers to run. The key steps typically include:
+
+1. Compiling: converting your code written in programming languages like Java into machine code that a computer can execute directly.
+2. Linking: combining the compiled machine code with additional dependencies (i.e. external resources required for your application to function) to create a single program for the computer to run all together.
+3. Packaging: assembling your file into a packaged form. For Java projects (which is what we're doing), this would be a JAR (Java Archive Resource) file that you'll learn more about in Project 3 of this DevOps Series. This JAR file makes your program easily distributed or deployed in other environments.
+4. Testing: running automated tests to make sure your software works without bugs or issues.

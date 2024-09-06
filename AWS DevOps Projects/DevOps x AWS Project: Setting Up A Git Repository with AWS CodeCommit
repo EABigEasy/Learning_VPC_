@@ -1,1 +1,9 @@
+STEP 1 : Crreate the WebApp using maven and Java
 
+
+Step 2: Create a Repository.
+
+You can use GitHub or AWS CodeCommit.
+We use GitHub. 
+
+Adding Link : https://community.nextwork.org/c/i-have-a-question/alternative-ways-if-you-can-t-use-aws-codecommit-project-6
